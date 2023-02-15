@@ -1,0 +1,15 @@
+/* GeoPicSorter's colors */
+span.geopicsorter_g {
+	color: #cfc;
+}
+span.geopicsorter_p {
+	color: #ccf;
+}
+span.geopicsorter_s {
+	color: #fcc;
+}
+span[class^="geopicsorter_"]{
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: default;
+}

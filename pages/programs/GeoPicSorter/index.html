@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+
+		<link rel=stylesheet href="../../../rsrc/css/main.css">
+		<link rel=stylesheet href="../../../rsrc/css/geopicsorter_text_logo.css">
+		
+		<title>Aldo Franquez's website - GeoPicSorter</title>
+	</head>
+	<body>
+		<div id=top_tb>
+			<span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by <a href="https://github.com/af-a1997" target=_blank>Aldo Franquez</a>
+		</div>
+		
+		<p class=page_pgh>
+			<span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> is a free and open source program written in Java that will automate the process of organizing pictures based on groups of geolocations such as streets, cities, etc. It's in its early stages of development, contributions of any kind are greatly appreciated!
+		</p>
+		
+		<div class=section>
+			<div class=section_heading>This page isn't finished</div>
+			<div class=section_content>
+				<p>Information such as credits for used tools, and some details at the <code class=inline_code_text>README.md</code> file in the repository are planned to be copied in here, as well as organizing information into sub-pages.</p>
+			</div>
+		</div>
+		
+		<div class=section>
+			<div class=section_heading>What do I need to run it?</div>
+			<div class=section_content>
+				<ul>
+					<li>16MB of disk storage.</li>
+					<li>Latest Java SE installation<span style="color: red;"><b>*</b></span>.</li>
+					<li>Internet connection.</li>
+				</ul>
+				
+				<p><span style="color: red;"><b>*</b></span>Java SE is required because of support for class version 62 files, which the Java 8 installation doesn't come with (it goes up to version 52). You can download Java SE <a href="https://www.oracle.com/java/technologies/downloads/" target=_blank>from the official website at Oracle</a>.</p>
+			</div>
+		</div>
+		
+		<div class=section>
+			<div class=section_heading>How do I download it?</div>
+			<div class=section_content>
+				<p>Simply download <a href="https://github.com/af-a1997/GeoPicSorter/releases" target=_blank>the latest release</a> from <a href="https://github.com/af-a1997/GeoPicSorter" target=_blank>its repository</a>, it's a <code class=inline_code_text>JAR</code> file that can be opened via a double click or by using the <code class=inline_code_text>java -jar</code> command.</p>
+			</div>
+		</div>
+		
+		<div class=section>
+			<div class=section_heading>Usage instructions</div>
+			<div class=section_content>
+				<p>Before using the tool, it's recommended to create a separate folder with a copy of all the pictures you wish to sort, in order to test the tool's usability.</p>
+				
+				<p>To get started, open <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by double-clicking the downloaded <code class=inline_code_text>JAR</code>, this window should show up:</p>
+				
+				<a href="../../../rsrc/img/screenshots/geopicsorter_open_folder.gif" target=_blank class=pict_links><img src="../../../rsrc/img/screenshots/geopicsorter_open_folder.gif" /></a>
+				
+				<p>Go to the <u class=inprog_link>Program</u> menu, select <u class=inprog_link>Open...</u> and finally <u class=inprog_link>Folder</u>, you can also just use the <code class=inline_code_text>Control + O</code> shortcut.</p>
+				
+				<a href="../../../rsrc/img/screenshots/geopicsorter_folder_chooser.png" target=_blank class=pict_links><img src="../../../rsrc/img/screenshots/geopicsorter_folder_chooser.png" /></a>
+				
+				<p>You'll see a folder selector like the one above, it's normal no files show up in it, this is how Java works. So select the folder where you have any unsorted pictures.</p>
+				
+				<a href="../../../rsrc/img/screenshots/geopicsorter_sorting_process_pre-start.png" target=_blank class=pict_links><img src="../../../rsrc/img/screenshots/geopicsorter_sorting_process_pre-start.png" /></a>
+				
+				<p>A window listing all of the detected files will show up, please note that only <code class=inline_code_text>.jpg</code> pictures were tested so far, as such, this is the only format that'll be detected.<br/>
+				Optionally, you can click the <u class=inprog_link>Set criteria...</u> button to define the sorting criteria to use, the default is by street.</p>
+				
+				<p>Once you're ready, press <u class=inprog_link>Start</u> and wait for the program to finish, there's no proper visual indication yet to let you know how's the process coming along, so please wait until the data shows up at the table, as shown in the screenshot below:</p>
+				
+				<a href="../../../rsrc/img/screenshots/geopicsorter_sorting_finished.png" target=_blank class=pict_links><img src="../../../rsrc/img/screenshots/geopicsorter_sorting_finished.png" /></a>
+				
+				<p>When you're done, you can close this window and repeat the process, or close the tool.</p>
+				
+				<a href="../../../rsrc/img/screenshots/geopicsorter_sorted_folders.png" target=_blank class=pict_links><img src="../../../rsrc/img/screenshots/geopicsorter_sorted_folders.png" /></a>
+				
+				<p>If you look into the folder where you used <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span>, you'll see the pictures have been copied to one or more sub-folders. <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> detects when a picture doesn't have geolocation data, or has it but the API that translates the coordinates doesn't return the required data, and handles them accordingly as shown in the screenshot.</p>
+			</div>
+		</div>
+	</body>
+</html>

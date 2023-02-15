@@ -7,6 +7,9 @@ body {
 	body {
 		background: url("../img/bg/IMG_20190912_190557.jpg") center left/100% auto no-repeat fixed;
 	}
+	.section .section_content img {
+		width: 600px;
+	}
 }
 @media screen and (max-width: 639px) {
 	body {
@@ -43,12 +46,16 @@ a:active {
 	background-color: #00c;
 	border: 1px solid #ddf;
 }
+a.pict_links {
+	background-color: rgba(0,0,0,0.0);
+	border: none;
+}
 
 /* Paragraphs */
 body>p:first-of-type {
 	margin-top: 50px;
 }
-p,ul.content_list {
+p.page_pgh, ul.content_list {
 	margin: 15px;
 	background-color: rgba(24,24,24,0.9);
 	box-shadow: 0 0 5px rgba(24,24,24,0.9);
@@ -57,4 +64,42 @@ p,ul.content_list {
 }
 ul.content_list :not(:last-child) {
 	padding-bottom: 20px;
+}
+
+/* Sections */
+.section {
+	margin: 15px;
+	border-radius: 10px;
+	background-color: rgba(24,24,24,0.9);
+	box-shadow: 0 0 5px rgba(24,24,24,0.9);
+}
+.section .section_heading{
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+	background-color: rgba(40,40,40,0.7);
+	font-size: 36px;
+	padding: 5px 0;
+	margin-bottom: 10px;
+}
+.section .section_content{
+	padding: 5px;
+}
+.section .section_content * {
+	margin: initial 5px;
+}
+
+/* Other */
+code {
+	font-family: Hack, "Ubuntu Mono", Consolas, monospace;
+	outline: 1px solid white;
+	background-color: #1a1a1a;
+	box-shadow: 2px 2px 5px #555;
+	padding: 2px;
+	font-size: 11px;
+	cursor: default;
+}
+u.inprog_link {
+	color: #EAD4FF;
+	text-shadow: 0 0 5px #EAD4FF;
+	cursor: default;
 }
