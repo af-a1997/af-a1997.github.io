@@ -1,12 +1,15 @@
 /* GeoPicSorter's colors */
 span.geopicsorter_g {
 	color: #cfc;
+	text-shadow: 0 0 5px #cfc;
 }
 span.geopicsorter_p {
 	color: #ccf;
+	text-shadow: 0 0 5px #ccf;
 }
 span.geopicsorter_s {
 	color: #fcc;
+	text-shadow: 0 0 5px #fcc;
 }
 span[class^="geopicsorter_"]{
 	font-weight: bold;
