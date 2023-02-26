@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+
+		<link rel=stylesheet href="/rsrc/css/main.css">
+		<link rel=stylesheet href="/rsrc/css/geopicsorter_text_logo.css">
+		
+		<title>Aldo Franquez's website - GeoPicSorter</title>
+	</head>
+	<body>
+		<div id=top_tb>
+			<div id=top_tb_left><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by <a href="https://github.com/af-a1997" target=_blank>Aldo Franquez</a></div>
+			<div id=top_tb_right>
+				<div id=top_tb_menu>
+					<div id=top_tb_menu_btn>&blacktriangledown;</div>
+					<div id=top_tb_menu_contents>
+						<ul>
+							<li><a href="../">Go back</a></li>
+							<li><a href="/">Home</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id=top_tb_links>
+					<a href="../">Go back</a><a href="/">Home</a>
+				</div>
+			</div>
+		</div>
+		
+		<p class=page_pgh>
+			This page explains how <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> works to sort your pictures in folders. Currently, it's <u>assumed</u> the API lets you send requests and it works all of the time, there's no implemented code that can handle errors. It's also tested to work on folders without sub-folders.
+		</p>
+		
+		<div class=section>
+			<div class=section_heading>How it works?</div>
+			<div class=section_content>
+				<ol>
+					<li>Once the user instructs <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> to begin organizing the pictures by pressing <u class=inprog_link>Start</u> on the files list window, it'll first look for any <code>.jpg</code> files in the chosen directory.</li>
+					<li>If at least one picture is detected, Metadata-extractor is used to attempt to fetch GPS information on each picture <u>recursively</u>.</li>
+					<li>Each of the pictures' location on the file system, their file names and coordinates (if any) are registered on a SQLite database locally, using SQLite JDBC.</li>
+					<li>After all the information has been registered on the database, it's iterated on to get the location data from it and send it to Geoapify via HTTP requests (using OkHttp) to their reverse geocoding API, which you can test on their playground site <a href="https://apidocs.geoapify.com/playground/geocoding/#reverse" target=_blank>here</a>.</li>
+					<li>As the requests are made, location names from the Earth matching the submitted coordinates and the chosen sorting criteria are extracted from the JSON output using the JSON-java tool, and stored in the database.</li>
+					<li>Folders for any location name that doesn't exist in the work directory are created.</li>
+					<li>Finally, pictures are copied to their matching folders, according to the names received from the API, Apache Commons IO is used to ensure file properties remain intact, this includes modification time. The user can change this default behavior to make the files <u>move</u> to the subfolders rather than keeping a copy on their original locations.</li>
+				</ol>
+			</div>
+		</div>
+		
+		<div class=section>
+			<div class=section_heading>What happens if a picture isn't geotagged or it is but the API doesn't return the required location name?</div>
+			<div class=section_content>
+				<p><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> can handle such cases, pictures without geotags or that miss latitude/longitude are moved to a folder named <code>[Unknown]</code>, while pictures with proper geotags that don't have the matching info go to a special folder based on the chosen criteria, this means that if the user chose "street", the pictures whose street name couldn't be infered, are moved to a folder named <code>[Streetless]</code>.</p>
+			</div>
+		</div>
+	</body>
+	
+	<script src="/rsrc/scripts/responsive_menu.js"></script>
+</html>

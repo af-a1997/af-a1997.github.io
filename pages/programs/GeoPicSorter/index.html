@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 
-		<link rel=stylesheet href="../../../rsrc/css/main.css">
-		<link rel=stylesheet href="../../../rsrc/css/geopicsorter_text_logo.css">
+		<link rel=stylesheet href="/rsrc/css/main.css">
+		<link rel=stylesheet href="/rsrc/css/geopicsorter_text_logo.css">
 		
 		<title>Aldo Franquez's website - GeoPicSorter</title>
 	</head>
@@ -15,7 +15,7 @@
 			<div id=top_tb_left><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by <a href="https://github.com/af-a1997" target=_blank>Aldo Franquez</a></div>
 			<div id=top_tb_right>
 				<div id=top_tb_menu>
-					<span id=top_tb_menu_btn>&blacktriangledown;</span>
+					<div id=top_tb_menu_btn>&blacktriangledown;</div>
 					<div id=top_tb_menu_contents>
 						<ul>
 							<li><a href="https://github.com/af-a1997/GeoPicSorter" target=_blank>Repository</a></li>
@@ -36,13 +36,13 @@
 		<div class=section>
 			<div class=section_heading>Which tools were used?</div>
 			<div class=section_content>
-				<p><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span>'s development was possible with the following third-party tools:</p>
+				<p><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span>'s development was possible thanks to the following third-party tools:</p>
 				
 				<ul>
 					<li><a href="https://github.com/drewnoakes/metadata-extractor" target=_blank>Metadata-extractor</a>: extract metadata from pictures, used to get the latitude and longitude from pictures.</li>
 					<li><a href="https://github.com/xerial/sqlite-jdbc" target=_blank>SQLite JDBC</a>: to manage SQLite databases, used to store configurations and data relevant to the picture sorting process like file location and coordinates.</li>
 					<li><a href="https://github.com/square/okhttp" target=_blank>OkHttp</a>: used to send HTTP requests to the online tool I use for translating coordinates into real life location data.</li>
-					<li><a href="https://www.geoapify.com/" target=_blank>Geoapify</a>: they offer a free reverse geocoding API that we can use to get that data I've just talked about.</li>
+					<li><a href="https://www.geoapify.com/" target=_blank>Geoapify</a>: they offer a free reverse geocoding API that we can use to get that data I've just talked about. By default, this service is used and a free API key is supplied for test usage right out the box.</li>
 					<li><a href="https://github.com/stleary/JSON-java" target=_blank>JSON-java</a>: because the data is returned in JSON format, it's necessary to selectively extract it, it's first received in a string then parsed as JSON, where the required info can be extracted, like the street name.</li>
 					<!--<li><a href="" target=_blank></a>: </li>-->
 				</ul>
@@ -73,11 +73,12 @@
 			<div class=section_heading>Sub sections</div>
 			<div class=section_content>
 				<ul>
-					<li><a href="usage">Usage instructions</a>: how to use and set-up the program.</li>
+					<li><a href="usage">Usage instructions</a>: how to use and set-up the program, this includes how to get an API key.</li>
+					<li><a href="how_it_works">How it works</a>: explains what's the process behind the picture sorting process (when the user picks a folder and orders the program to start sorting).</li>
 				</ul>
 			</div>
 		</div>
 	</body>
 	
-	<script src="../../../rsrc/scripts/responsive_menu.js"></script>
+	<script src="/rsrc/scripts/responsive_menu.js"></script>
 </html>

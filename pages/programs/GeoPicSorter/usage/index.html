@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 
-		<link rel=stylesheet href="../../../../rsrc/css/main.css">
-		<link rel=stylesheet href="../../../../rsrc/css/geopicsorter_text_logo.css">
+		<link rel=stylesheet href="/rsrc/css/main.css">
+		<link rel=stylesheet href="/rsrc/css/geopicsorter_text_logo.css">
 		
 		<title>Aldo Franquez's website - GeoPicSorter - How to use</title>
 	</head>
@@ -15,7 +15,7 @@
 			<div id=top_tb_left><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by <a href="https://github.com/af-a1997" target=_blank>Aldo Franquez</a></div>
 			<div id=top_tb_right>
 				<div id=top_tb_menu>
-					<span id=top_tb_menu_btn>&blacktriangledown;</span>
+					<div id=top_tb_menu_btn>&blacktriangledown;</div>
 					<div id=top_tb_menu_contents>
 						<ul>
 							<li><a href="../">Go back</a></li>
@@ -40,26 +40,26 @@
 				
 				<p>To get started, open <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by double-clicking the downloaded <code class=inline_code_text>JAR</code>, this window should show up:</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_open_folder.gif" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_open_folder.gif" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_open_folder.gif" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_open_folder.gif" /></a>
 				
 				<p>Go to the <u class=inprog_link>Program</u> menu, select <u class=inprog_link>Open...</u> and finally <u class=inprog_link>Folder</u>, you can also just use the <code class=inline_code_text>Control + O</code> shortcut.</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_folder_chooser.png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_folder_chooser.png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_folder_chooser.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_folder_chooser.png" /></a>
 				
 				<p>You'll see a folder selector like the one above, it's normal no files show up in it, this is how Java works. So select the folder where you have any unsorted pictures.</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_sorting_process_pre-start.png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_sorting_process_pre-start.png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_sorting_process_pre-start.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_sorting_process_pre-start.png" /></a>
 				
 				<p>A window listing all of the detected files will show up, please note that only <code class=inline_code_text>.jpg</code> pictures were tested so far, as such, this is the only format that'll be detected.<br/>
 				Optionally, you can click the <u class=inprog_link>Set criteria...</u> button to define the sorting criteria to use, the default is by street.</p>
 				
 				<p>Once you're ready, press <u class=inprog_link>Start</u> and wait for the program to finish, there's no proper visual indication yet to let you know how's the process coming along, so please wait until the data shows up at the table, as shown in the screenshot below:</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_sorting_finished.png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_sorting_finished.png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_sorting_finished.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_sorting_finished.png" /></a>
 				
 				<p>When you're done, you can close this window and repeat the process, or close the tool.</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_sorted_folders.png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_sorted_folders.png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_sorted_folders.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_sorted_folders.png" /></a>
 				
 				<p>If you look into the folder where you used <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span>, you'll see the pictures have been copied to one or more sub-folders. <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> detects when a picture doesn't have geolocation data, or has it but the API that translates the coordinates doesn't return the required data, and handles them accordingly as shown in the screenshot.</p>
 			</div>
@@ -71,17 +71,17 @@
 				<p>There's not really that much to do for now, but what you <b>should</b> consider doing is getting your own API key, it's an alphanumeric code (for example: <code>0f885492e6b641c2a93406bc729a2d23</code>) required to interact with an online service that receives the latitude and longitude extracted from the pictures, and returned as a JSON string from which information can be extracted selectively. I use Geoapify for getting that information, but support for LocationIQ is also planned.<br>
 				While <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> includes a free key for everyone to use, it has a limited quota, and using it will lead to anyone not being able to use the tool for a time, you're encouraged to supply your own key because of this, and the key itself being free.</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_settings_pg[1].png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_settings_pg[1].png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_settings_pg[1].png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_settings_pg[1].png" /></a>
 				
 				<p>To sign up, simply go <a href="https://myprojects.geoapify.com/register" target=_blank>here</a> or log in if you already have an account.</p>
 				
 				<p>Once that's been taken care of and your account is ready for use, go to <a href="https://myprojects.geoapify.com/projects" target=_blank>the projects page</a> and click the <u class=inprog_link>Add a new project...</u> button that shows up at the beginning. You'll be prompted to input a name, do so, confirm it, and...</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_project_creation_on_geoapify.png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_project_creation_on_geoapify.png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_project_creation_on_geoapify.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_project_creation_on_geoapify.png" /></a>
 				
 				<p>You'll automatically be redirected to the page in which you manage your keys, and one will be ready for you. Click the <u class=inprog_link>Copy to clipboard</u> icon that's next to the key.</p>
 				
-				<a href="../../../../rsrc/img/screenshots/geopicsorter_paste_key.png" target=_blank class=pict_links><img src="../../../../rsrc/img/screenshots/geopicsorter_paste_key.png" /></a>
+				<a href="/rsrc/img/screenshots/geopicsorter_paste_key.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geopicsorter_paste_key.png" /></a>
 				
 				<p>Once you got the API key, paste it by double clicking on the current key that shows up in the home screen of <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> then hitting <code>Control + V</code>, on that text field with the default key.<br/>
 				Finally, click the <u class=inprog_link>Use this key</u> button, and you'll be set to organize pictures without any other user sharing it.
@@ -89,5 +89,5 @@
 		</div>
 	</body>
 	
-	<script src="../../../../rsrc/scripts/responsive_menu.js"></script>
+	<script src="/rsrc/scripts/responsive_menu.js"></script>
 </html>
