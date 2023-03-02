@@ -7,7 +7,7 @@ body {
 	body {
 		background: url("../img/bg/IMG_20190912_190557.jpg") center left/100% auto no-repeat fixed;
 	}
-	.section .section_content img {
+	.section .section_content img, .page_pgh img {
 		width: 600px;
 	}
 	
@@ -22,7 +22,7 @@ body {
 	body {
 		background: url("../img/bg/IMG_20190912_190557.jpg") center left/auto 100% no-repeat fixed;
 	}
-	.section .section_content img {
+	.section .section_content img, .page_pgh img {
 		width: 95%;
 	}
 	
