@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang=en>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+
+		<link rel=stylesheet href="/rsrc/css/main.css">
+		<link rel=stylesheet href="/rsrc/css/geopicsorter_text_logo.css">
+		
+		<title>Aldo Franquez's website - GeoPicSorter - Why?</title>
+	</head>
+	<body>
+		<div id=top_tb>
+			<div id=top_tb_left><span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> by <a href="https://github.com/af-a1997" target=_blank>Aldo Franquez</a></div>
+			<div id=top_tb_right>
+				<div id=top_tb_menu>
+					<div id=top_tb_menu_btn>&blacktriangledown;</div>
+					<div id=top_tb_menu_contents>
+						<ul>
+							<li><a href="../">Go back</a></li>
+							<li><a href="/">Home</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id=top_tb_links>
+					<a href="../">Go back</a><a href="/">Home</a>
+				</div>
+			</div>
+		</div>
+
+		<p class=page_pgh>This section aims to explain why was <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> developed, and how can it be useful, as well as the research involved during its development.</p>
+		
+		<div class=section>
+			<div class=section_heading>Why was it developed?</div>
+			<div class=section_content>
+				<p>Before development began, I've done research on other tools that promise organizing pictures by folders based on various different kinds of criteria, the following software has been found:</p>
+
+				<ul>
+					<li><a href="https://wethegeek.com/how-to-sort-photos-by-date/">PhotoMove</a></li>
+					<li><a href="https://www.yawcam.com/exifsort/">ExifSort</a></li>
+					<li><a href="https://www.systweak.com/photo-organizer">Systweak Photo Organizer</a></li>
+					<li><a href="https://imageranger.com/tips/how_to_arrange_in_folders/">ImageRanger</a></li>
+				</ul>
+				
+				<p>While these tools can sort pictures by date taken, most of those can't be used to sort by geolocation, save for ImageRanger, which actually can pull that in a very limited way.</p>
+				
+				<p>ImageRanger allows you to sort pictures by city and manages to pull off the job while being capable of operation offline, however, it's a rather large tool that does more than that and is available for free as a 10-day trial, after which, payment is required for a license.</p>
+				
+				Because of these limitations, and the lack of tools that would help me sorting my geotagged pictures, the need to develop a tool that could automatically do all of the sorting to help me with clean-up, tidying up my collection of pictures, etc. has been on my mind.<br />
+				Thanks to that research, <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> was coined and eventually set in development.
+
+				<br /><br />
+
+				<p>With this tool, I'm not only solving an issue of my own, but also hoping it'll be useful to other people and raising awareness on the importance of geotagging pictures.</p>
+			</div>
+		</div>
+		
+		<div class=section>
+			<div class=section_heading>But what's geotagging and how is it important?</div>
+			<div class=section_content>
+				<p><a href="https://osf.io/preprints/socarxiv/t874p/" target=_blank>Geotagging</a> a picture is the act of embedding real-life location GPS coordinates inside a picture's properties, namely its metadata, whether it's at the moment of taking a picture (by using your device's GPS receiver) or by manually editing a picture's metadata after taking it.</p>
+
+				<p>As an example, let's take a look at the information behind this picture:</p>
+				
+				<a href="/rsrc/img/misc/IMG_20211201_162421.jpg" target=_blank class=pict_links><img src="/rsrc/img/misc/IMG_20211201_162421.jpg" /></a>
+				
+				<p>This picture has the following location information</p>
+
+				<a href="/rsrc/img/screenshots/exiftool_gps_sample.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/exiftool_gps_sample.png" /></a>
+				
+				<p>You can use software like <a href="https://www.xnview.com/en/xnviewmp/" target=_blank>XnView</a> that send the coordinates to an online service, which translates those coordinates into real-life location information. This process is known as <a href="https://en.wikipedia.org/wiki/Reverse_geocoding" target=_blank>reverse geocoding</a>:</p>
+				
+				<a href="/rsrc/img/screenshots/geohack_example.png" target=_blank class=pict_links><img src="/rsrc/img/screenshots/geohack_example.png" /></a>
+
+				<p><a href="https://geohack.toolforge.org/geohack.php?language=en&params=-34.104660_N_-56.224125_E_" target=_blank>For the example above</a>, we found out that picture was taken at an intersection between the "Treinta y Tres" and "General Fructoso Rivera" streets in <a href="https://en.wikipedia.org/wiki/Florida,_Uruguay">Florida, Uruguay</a>.</p>
+
+				<p>With this information, we have an understanding on what can geotagging do, but it's particularly useful for keeping track of locations you've visited without having to annotate them, assisting with organization, for organizing software that allows you to visualize the location(s) of the pictures you've taken, directly on a map, etc.</p>
+
+				<p>Geotagging can be really useful, and the goal of <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span> is to promote its usefulness, with a free and open source tool everyone can use anytime.</p>
+			</div>
+		</div>
+		
+		<div class=section>
+			<div class=section_heading>And why not making a more full-fledged tool with more sorting criterias?</div>
+			<div class=section_content>
+				<p>Other tools already can do that job, <span class=geopicsorter_g>Geo</span><span class=geopicsorter_p>Pic</span><span class=geopicsorter_s>Sorter</span>'s goal is to raise awareness about geotagging and to accomplish a task no other tool had previously done, prior to its inception.</p>
+			</div>
+		</div>
+	</body>
+	
+	<script src="/rsrc/scripts/responsive_menu.js"></script>
+</html>

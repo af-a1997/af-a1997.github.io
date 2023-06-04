@@ -165,3 +165,8 @@ u.inprog_link {
 	text-shadow: 0 0 5px #EAD4FF;
 	cursor: default;
 }
+span.asterisk {
+	color: red;
+	vertical-align: super;
+	font-weight: bold;
+}
